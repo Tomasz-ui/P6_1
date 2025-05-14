@@ -53,10 +53,15 @@ class Main {
             System.out.println("3 - aby wyszukać studenta po imieniu");
             System.out.println("0 - aby wyjść z programu");
             try {
-                return scan.nextInt();
+                int choice = scan.nextInt();
+                if (choice < 0 || choice > 3) {
+                    System.out.println("Błędny wybór (Poza zakresem 0-3)");
+                    continue;
+                }
+                return choice;
             } catch (InputMismatchException e) {
-                System.out.println("Błędny wybór menu! Proszę podać cyfrę.");
-                scan.nextLine(); 
+                System.out.println("Błędny wybór menu, proszę podać cyfrę");
+                scan.nextLine();
             }
         }
     }
