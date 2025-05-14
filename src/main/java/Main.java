@@ -36,7 +36,7 @@ class Main {
             } catch(WrongStudentName e) {
                 System.out.println("Błędne imię studenta!");
             } catch(WrongAge e) {
-                System.out.println("Błędny wiek! Wiek powinien być między 1 a 99.");
+                System.out.println("Błędny wiek. Wiek powinien być między 1 a 99.");
             }
         }
     }
